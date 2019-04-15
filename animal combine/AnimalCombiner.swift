@@ -1,35 +1,39 @@
-import Foundation
+import UIKit
 
-enum animal: String {
+public enum Animal: String {
     case dog
     case cow
     case duck
     case beaver
     case jackrabbit
     case antiloap
+    case noamimal
 }
 
-struct Response {
-    let name: String
-    let image: UIImage
+public struct Response {
+    public let animal1: Animal
+    public let animal2: Animal
+    public let name: String
+    public let image: UIImage
 }
 
-typealias Pair = (animal, animal)
+public typealias Pair = (Animal, Animal)
 
-class AnimalCombiner {
+public class AnimalCombiner {
 
-    static let shared = AnimalCombiner()
+    public static let shared = AnimalCombiner()
 
-    func combine(pair: Pair) -> Response {
+    public func combine(pair: Pair) -> Response {
         switch pair {
         case (.dog, .cow):
-            return Response(name: "Claris", image: #imageLiteral(resourceName: "DogCow_from_LaserWriter_8"))
+            let response = Response(animal1: .dog, animal2: .cow, name: "Claris", image: #imageLiteral(resourceName: "DogCow_from_LaserWriter_8"))
+            return response
         case (.duck, .beaver):
-            return Response(name: "Platypus", image: #imageLiteral(resourceName: "iu"))
+            return Response(animal1: .duck, animal2: .beaver, name: "Platypus", image: #imageLiteral(resourceName: "iu"))
         case (.jackrabbit, .antiloap):
-            return Response(name: "Jackalope", image: #imageLiteral(resourceName: "iu-1"))
+            return Response(animal1: .jackrabbit, animal2: .antiloap, name: "Jackalope", image: #imageLiteral(resourceName: "iu-1"))
         default:
-            return Response(name: "That's not an animal", image: #imageLiteral(resourceName: "iu-2"))
+            return Response(animal1: .noamimal, animal2: .noamimal, name: "That's not an animal", image: #imageLiteral(resourceName: "iu-2"))
         }
     }
 }

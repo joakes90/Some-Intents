@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 //! Project version number for animal_combine.
 FOUNDATION_EXPORT double animal_combineVersionNumber;
 
