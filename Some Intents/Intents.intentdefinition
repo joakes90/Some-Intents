@@ -22,12 +22,12 @@
 			<key>INIntentDescriptionID</key>
 			<string>bCaj6x</string>
 			<key>INIntentLastParameterTag</key>
-			<integer>2</integer>
+			<integer>3</integer>
 			<key>INIntentName</key>
 			<string>Animals</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
-				<key></key>
+				<key>animal1,animal2</key>
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>
 					<true/>
@@ -38,7 +38,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Animal Combiner</string>
+					<string>Combine ${animal1} and ${animal2}</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>00YlVx</string>
 				</dict>
@@ -86,7 +86,7 @@
 					</dict>
 					<dict>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>${animal1} + ${animal2} = ${newAnimal}</string>
+						<string>${animal1} plus ${animal2} equals ${newAnimal}</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>M2Fwbh</string>
 						<key>INIntentResponseCodeName</key>
