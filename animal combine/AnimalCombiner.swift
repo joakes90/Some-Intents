@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 public enum Animal: String {
     case dog
@@ -14,10 +14,9 @@ public struct Response {
     public let animal1: Animal
     public let animal2: Animal
     public let name: String
-    public let image: UIImage
 }
 
-public typealias Pair = (Animal, Animal)
+public typealias Pair = (animal1: Animal, animal2: Animal)
 
 public class AnimalCombiner {
 
@@ -26,14 +25,13 @@ public class AnimalCombiner {
     public func combine(pair: Pair) -> Response {
         switch pair {
         case (.dog, .cow):
-            let response = Response(animal1: .dog, animal2: .cow, name: "Claris", image: #imageLiteral(resourceName: "DogCow_from_LaserWriter_8"))
-            return response
+            return Response(animal1: .dog, animal2: .cow, name: "Claris")
         case (.duck, .beaver):
-            return Response(animal1: .duck, animal2: .beaver, name: "Platypus", image: #imageLiteral(resourceName: "iu"))
+            return Response(animal1: .duck, animal2: .beaver, name: "Platypus")
         case (.jackrabbit, .antiloap):
-            return Response(animal1: .jackrabbit, animal2: .antiloap, name: "Jackalope", image: #imageLiteral(resourceName: "iu-1"))
+            return Response(animal1: .jackrabbit, animal2: .antiloap, name: "Jackalope")
         default:
-            return Response(animal1: .noamimal, animal2: .noamimal, name: "That's not an animal", image: #imageLiteral(resourceName: "iu-2"))
+            return Response(animal1: .noamimal, animal2: .noamimal, name: "That's not an animal")
         }
     }
 }
